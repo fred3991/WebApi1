@@ -115,12 +115,12 @@
     }
  // вывод полученных данных на экран
     function WriteResponse(books) {
-        var strResult = "<table><th>ID</th><th>Название</th><th>Автор</th><th>Год издания</th>";
+        var strResult = "<table><th><th>ID</th><th><th>Название</th><th><th>Автор</th><th><th>Год издания</th>";
         $.each(books, function (index, book) {
-            strResult += "<tr><td>" + book.Id + "</td><td> " + book.Name + "</td><td>" +
+            strResult += "<tr><td><th>" + book.Id + "</td><td><th> " + book.Name + "</td><td><th>" +
             book.Author + "</td><td>" + book.Year +
-            "</td><td><a id='editItem' data-item='" + book.Id + "' onclick='EditItem(this);' >Редактировать</a></td>" +
-            "<td><a id='delItem' data-item='" + book.Id + "' onclick='DeleteItem(this);' >Удалить</a></td></tr>";
+            "</td><td><a id='editItem' data-item='" + book.Id + "' onclick='EditItem(this);' >Редактировать</a></td><th>" +
+            "<td><a id='delItem' data-item='" + book.Id + "' onclick='DeleteItem(this);' >Удалить</a></td></tr><th>";
         });
         strResult += "</table>";
         $("#tableBlock").html(strResult);

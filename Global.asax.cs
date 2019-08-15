@@ -15,6 +15,8 @@ namespace WebApi1
     {
         protected void Application_Start()
         {
+            MvcHandler.DisableMvcResponseHeader = true;
+
             Database.SetInitializer(new BookDbInitializer());
 
             AreaRegistration.RegisterAllAreas();
